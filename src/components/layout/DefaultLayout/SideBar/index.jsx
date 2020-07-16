@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import {
 	CalendarOutlined,
 	HomeOutlined,
-	FileOutlined,
 	TeamOutlined,
 	UserOutlined,
 	LogoutOutlined,

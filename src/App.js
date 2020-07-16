@@ -8,7 +8,6 @@ import store from './redux/store';
 import { toastr } from 'react-redux-toastr';
 import jwtDecode from 'jwt-decode';
 import setAuthToken from './utils/setAuthToken';
-import Messages from './components/layout/Messages';
 import { setCurrentUser, logout } from './redux/actions/userActions';
 import DefaultLayout from './components/layout/DefaultLayout';
 import NotFound from './pages/NotFound';

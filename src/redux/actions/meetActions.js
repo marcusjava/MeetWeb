@@ -8,7 +8,6 @@ import {
 	SET_MEET_ITEMS,
 	CLEAR_SUCCESS,
 } from '../types';
-import { message } from 'antd';
 
 import { toastr } from 'react-redux-toastr';
 
@@ -51,7 +50,11 @@ export const myMeets = () => (dispatch, getState) => {
 	return dispatch({
 		type: SET_MEET_ITEMS,
 		payload: items.filter((item) => {
-			if (item.participants.find((participant) => participant._id == id)) return item;
+			if (item.participants.find((participant) => participant._id === id)) {
+				return item;
+			} else {
+				return {};
+			}
 		}),
 	});
 };
