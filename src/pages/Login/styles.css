@@ -1,0 +1,18 @@
+.logo {
+	width: 600px;
+	height: 600px;
+}
+
+.login {
+	margin-top: 100px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+.login-form {
+	max-width: 400px;
+}
+
+.login-button {
+	width: 100%;
+}

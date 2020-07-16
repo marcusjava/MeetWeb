@@ -1,0 +1,8 @@
+#users-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 20px;
+	min-height: 600px;
+	background: #1a4aa4;
+}
