@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Row, Col, Form, Input, Button, Modal } from 'antd';
+import { Row, Col } from 'antd';
 import Table from './Table';
 import CadModal from './CadModal';
 

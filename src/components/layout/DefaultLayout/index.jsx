@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Layout } from 'antd';
-import { Switch, Redirect, Route } from 'react-router-dom';
-import NotFound from '../../../pages/NotFound';
+import { Switch } from 'react-router-dom';
 import SideBar from './SideBar';
 import routes from '../../../routes';
 import PrivateRoute from '../../PrivateRoute';

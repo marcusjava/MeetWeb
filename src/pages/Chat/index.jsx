@@ -1,18 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Modal, Button, Form, Input, Spin, Row, Col, message } from 'antd';
+import { Row, Col } from 'antd';
 import { useParams } from 'react-router-dom';
 import ChatInfo from '../../components/ChatInfo';
 import ChatInput from '../../components/ChatInput';
 import ChatMessages from '../../components/ChatMessages';
-import {
-	SearchOutlined,
-	CloseOutlined,
-	CheckOutlined,
-	CheckCircleTwoTone,
-	InfoCircleTwoTone,
-	CloseCircleTwoTone,
-	MessageTwoTone,
-} from '@ant-design/icons';
 import { useDipatch, useSelector } from 'react-redux';
 import io from 'socket.io-client';
 import api from '../../utils/api';
@@ -33,10 +24,8 @@ const Chat = () => {
 
 	const { credentials } = useSelector((state) => state.auth.user);
 
-	const ENDPOINT = 'http://localhost:3001';
-
 	useEffect(() => {
-		socket = io(ENDPOINT);
+		socket = io(process.env.REACT_CHAT_ENDPOINT);
 		setName(credentials.name);
 		setUserId(credentials.id);
 		setRoom(id);

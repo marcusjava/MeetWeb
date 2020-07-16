@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Table, Typography, Popover, Tag, Input, Button, Space, Avatar, DatePicker, Switch, Row, Col } from 'antd';
+import { Table, Popover, Tag, Input, Button, Avatar, DatePicker, Switch, Row, Col } from 'antd';
 import Spinner from '../../components/layout/Spinner';
 import { useDispatch, useSelector } from 'react-redux';
-import { list, myMeets, update } from '../../redux/actions/meetActions';
+import { list, update } from '../../redux/actions/meetActions';
 import { Link } from 'react-router-dom';
 import {
 	SearchOutlined,

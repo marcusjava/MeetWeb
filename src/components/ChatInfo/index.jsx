@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Space, Avatar, Comment } from 'antd';
+import React from 'react';
+import { Avatar, Comment } from 'antd';
 import './styles.css';
 const ChatInfo = ({ users }) => {
-	console.log(users);
 	return (
 		<div id="users-list">
 			{users.map((user, index) => (

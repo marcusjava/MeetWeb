@@ -24,7 +24,7 @@ const Profile = () => {
 			setLoading(false);
 		}
 		getUser();
-	}, []);
+	}, [id]);
 
 	useEffect(() => {
 		form.setFieldsValue({

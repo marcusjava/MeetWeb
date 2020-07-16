@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Col } from 'antd';
-import api from '../../utils/api';
 import Table from './Table';
 import CadModal from './CadModal';
+import axios from 'axios';
 
 const Places = () => {
 	const [places, setPlaces] = useState([]);
-	const [place, setPlace] = useState({});
+	const [loading, setLoading] = useState(false);
 
 	const getPlaces = async () => {
-		console.log('get places');
-		const response = await api.get('/locals');
+		setLoading(true);
+		const response = await axios.get('/locals');
 		setPlaces(response.data);
+
+		setLoading(false);
 	};
 
 	useEffect(() => {
@@ -27,7 +29,7 @@ const Places = () => {
 			</Row>
 			<Row justify="center" style={{ marginTop: '30px' }}>
 				<Col span={24}>
-					<Table places={places} getPlaces={getPlaces} />
+					<Table places={places} getPlaces={getPlaces} loading={loading} />
 				</Col>
 			</Row>
 		</div>

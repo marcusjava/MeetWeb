@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Table from '../Meeting/Table';
-import { Row, Col } from 'antd';
 
 const Dashboard = () => {
 	return (
