@@ -52,7 +52,6 @@ const SideBar = () => {
 					<Menu.Item key="4" icon={<EnvironmentOutlined />}>
 						<Link to="/home/localidades">Locais</Link>
 					</Menu.Item>
-					<Menu.Item key="5">Team 2</Menu.Item>
 				</SubMenu>
 				<SubMenu key="sub1" icon={<Avatar src={avatar_url} />}>
 					<Menu.Item key="6">{name}</Menu.Item>

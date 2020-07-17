@@ -81,11 +81,11 @@ const LocalTable = ({ places, getPlaces }) => {
 			dataIndex: 'address',
 			key: 'address',
 			render: (address) => {
-				return (
+				return address ? (
 					<Text>
 						{address.street},{address.city} - {address.state}
 					</Text>
-				);
+				) : null;
 			},
 		},
 		{ title: 'Contato 1', dataIndex: 'contact1', key: 'contact1' },

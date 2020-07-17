@@ -57,6 +57,7 @@ const PlaceModal = ({ places, editMode = false, data }) => {
 	}, [selectedUF]);
 
 	const handleSubmit = async (data) => {
+		console.log(data);
 		try {
 			const schema = Yup.object().shape({
 				name: Yup.string().required('Nome do local obrigatorio'),
@@ -64,11 +65,25 @@ const PlaceModal = ({ places, editMode = false, data }) => {
 			});
 			await schema.validate(data, { abortEarly: false });
 			try {
+				const local = {
+					name: data.name,
+					email: data.email,
+					address: {
+						street: data.address.street,
+						neighborhood: data.address.neighborhood,
+						city: data.address.city,
+						state: data.address.state,
+						cep: data.address.cep,
+					},
+					contact1: data.contact1,
+					contact2: data.contact2,
+					ip: data.ip,
+				};
 				if (editMode) {
-					await axios.put(`/locals/${data.id}`, data);
+					await axios.put(`/locals/${data.id}`, local);
 					message.success('Local atualizado com sucesso');
 				} else {
-					const response = await axios.post('/locals', data);
+					const response = await axios.post('/locals', local);
 					if (response.status === 201) {
 						message.success('Local criado com sucesso');
 					}
